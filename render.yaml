@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: lead-scoring-system
+    env: docker
+    region: singapore # Choose the region closest to your users
+    plan: starter # You can change this based on your needs
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false # This means you'll set it manually in Render dashboard
+    scaling:
+      minInstances: 1
+      maxInstances: 1
