@@ -1,0 +1,37 @@
+{
+  "name": "kuvaka_assignment",
+  "version": "1.0.0",
+  "description": "AI Lead Scoring System",
+  "keywords": [
+    "AI",
+    "NodeJS",
+    "express",
+    "Gemini"
+  ],
+  "license": "ISC",
+  "author": "Rishabh Gupta",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules ./index.js",
+    "start": "node --experimental-json-modules ./index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.10",
+    "papaparse": "^5.5.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.1.0",
+    "supertest": "^6.3.3"
+  }
+}
